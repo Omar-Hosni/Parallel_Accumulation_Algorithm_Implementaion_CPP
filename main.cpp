@@ -49,20 +49,7 @@ T parallel_accumulate(iterator start, iterator end, T& refs)
 }
 
 
-int main() {
-
-	auto dash_fold = [](string a, int b) {
-		return move(a) + "-" + to_string(b);
-	};
-
-	vector<int> v{ 1,2,3,4,5,6,7,8,9,10 };
-	int sum = accumulate(v.begin(), v.end(), 0);
-	int product = accumulate(v.begin(), v.end(), 1, multiplies<int>());
-	string s = accumulate(next(v.begin()), v.end(), to_string(v[0]), dash_fold);
-
-	cout << "sum: " << sum << "\n";
-	cout << "product: " << product << "\n";
-	cout << "dash fold: " << s << "\n";
+int main() 
 
 
 	const int size = 8000;
